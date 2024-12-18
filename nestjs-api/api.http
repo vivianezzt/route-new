@@ -8,7 +8,19 @@ GET http://localhost:3000/places?text=av amazonas, belo horizonte, 1000
 @destinationId = ChIJTcM3WRKWpgARIBxMZeldEtM
 
 ###
-GET http://localhost:3000/directions=originId=&destinationId=
+GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
 
 ###
-GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "rota 1",
+    "source_id": "{{ originId }}",
+    "destination_id": "{{ destinationId }}"
+}
+###
+GET http://localhost:3000/routes
+
+###
+GET http://localhost:3000/routes/6762e3f76c7c18a1d6265926

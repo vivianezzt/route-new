@@ -19,9 +19,11 @@ export class DirectionsService {
       mode: TravelMode.driving,
       key: this.configService.get('GOOGLE_MAPS_API_KEY'),
     };
+
     const { data } = await this.googleMapsClient.directions({
       params: requestParams,
     });
+
     return {
       ...data,
       request: {
@@ -38,8 +40,8 @@ export class DirectionsService {
             lat: data.routes[0].legs[0].end_location.lat,
             lng: data.routes[0].legs[0].end_location.lng,
           },
-          mode: requestParams.mode,
         },
+        mode: requestParams.mode,
       },
     };
   }
