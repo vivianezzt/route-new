@@ -1,1 +1,14 @@
 GET http://localhost:3000/places?text=av governador valadares, betim, 1000
+
+###
+GET http://localhost:3000/places?text=av amazonas, belo horizonte, 1000
+
+###
+@originId = EkBBdi4gR292LiBWYWxhZGFyZXMsIDEwMDAgLSBDZW50cm8sIEJldGltIC0gTUcsIDM2NDEwLTAyNiwgQnJhc2lsIjESLwoUChIJqWNAFJLDpgARpsy5kCM5OC8Q6AcqFAoSCXkSTsuRw6YAETPuVaoFp4Tx
+@destinationId = ChIJTcM3WRKWpgARIBxMZeldEtM
+
+###
+GET http://localhost:3000/directions=originId=&destinationId=
+
+###
+GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
