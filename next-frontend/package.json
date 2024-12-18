@@ -1,5 +1,5 @@
 {
-  "name": "next-multi-tenancy",
+  "name": "next-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky",
-    "api": "node api/app.js"
+    "prepare": "husky"
   },
   "dependencies": {
     "git-commit-msg-linter": "^5.0.8",
